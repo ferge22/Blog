@@ -1,0 +1,8 @@
+<div class="row" align-items-center>
+  <app-single-post
+    class="col-xs-12 col-md-6"
+    *ngFor="let post of loadedPosts; let i = index"
+    [index]="i"
+    [singlePost]="post"
+  ></app-single-post>
+</div>

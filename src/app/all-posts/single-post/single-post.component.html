@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card-img-top img-thumbnail" [src]="singlePost.imagePath"/>
+  <div class="card-body">
+    <h5 class="card-title">{{ singlePost.title | shorten: 15 }}</h5>
+    <p class="card-text">
+      {{ singlePost.description | shorten: 30 }}
+    </p>
+    <button class="btn btn-primary" [routerLink]="[index]">See more...</button>
+  </div>
+</div>
