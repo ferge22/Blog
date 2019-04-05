@@ -11,7 +11,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 
 export class PostEditComponent implements OnInit {
+  id: number;
   post: Post;
+  editMode = false;
   postForm: FormGroup;
 
   constructor(
@@ -27,7 +29,12 @@ export class PostEditComponent implements OnInit {
           this.router.navigate(['/posts']);
           return;
         }
+        this.id = paramMap.get('id');
+        console.log(this.id);
         this.post = this.postService.getPost(paramMap.get('id'));
+        // if there is id sets edit mode to true
+        this.editMode = paramMap.get('id') != null;
+        // custom from validation with preset values
         this.postForm =  new FormGroup({
           title: new FormControl(this.post.title, {
             updateOn: 'blur',
@@ -48,11 +55,15 @@ export class PostEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.postForm);
+    console.log(this.postForm.value);
+    if (this.editMode) {
+      this.postService.updatePost(this.id, this.postForm.value);
+    }
+    this.onCancel();
   }
 
   onCancel() {
-    this.router.navigate(['/posts'])
+    this.router.navigate(['../'], {relativeTo: this.activatedRoute});
   }
 
 }

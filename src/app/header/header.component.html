@@ -7,12 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" routerLink="/posts">Posts</a>
+          <a class="nav-link" [routerLink]="['/posts']">Posts</a>
         </li>
       </ul>
       <ul class="navbar-nav justify-content-end">
           <li class="nav-item" [routerLinkActive]="['active']">
-            <a class="nav-link" href="">New Post</a>
+            <a class="nav-link" [routerLink]="['/new']">New Post</a>
           </li>
       </ul>
     </div>
