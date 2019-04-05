@@ -11,6 +11,9 @@
             formControlName="title"
           />
         </div>
+        <div class="alert alert-danger" role="alert" *ngIf="!postForm.get('title').valid && postForm.get('title').touched">
+            Title must be between 1 and 30 chars.
+        </div>
         <div class="form-group">
           <label for="name">Image URL</label>
           <input
@@ -33,6 +36,9 @@
             formControlName="description"
             rows="6"
           ></textarea>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="!postForm.get('description').valid && postForm.get('description').touched">
+            Description must be between 1 and chars 130.
         </div>
         <div class="cstm-btns">
           <button type="submit" class="btn btn-success" [disabled]="!postForm.valid">Save</button>

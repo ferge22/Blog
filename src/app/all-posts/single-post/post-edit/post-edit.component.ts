@@ -38,11 +38,11 @@ export class PostEditComponent implements OnInit {
         this.postForm =  new FormGroup({
           title: new FormControl(this.post.title, {
             updateOn: 'blur',
-            validators: [Validators.required, Validators.maxLength(30)]
+            validators: [Validators.required, Validators.maxLength(30), Validators.minLength(1)]
           }),
           description: new FormControl(this.post.description, {
             updateOn: 'blur',
-            validators: [Validators.required, Validators.maxLength(180)]
+            validators: [Validators.required, Validators.maxLength(130), Validators.minLength(1)]
           }),
           imagePath: new FormControl(this.post.imagePath, {
             updateOn: 'blur',
@@ -57,7 +57,11 @@ export class PostEditComponent implements OnInit {
   onSubmit() {
     console.log(this.postForm.value);
     if (this.editMode) {
-      this.postService.updatePost(this.id, this.postForm.value);
+      this.postService.updatePost(this.id,
+        new Post(
+        this.postForm.value.title,
+        this.postForm.value.description,
+        this.postForm.value.imagePath));
     }
     this.onCancel();
   }
