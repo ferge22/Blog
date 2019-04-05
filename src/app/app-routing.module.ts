@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'posts', component: AllPostsComponent},
   {path: 'new', component: NewPostComponent},
   {path: 'posts/:id', component: PostDetailComponent },
-  {path: ':id/edit', component: PostEditComponent},
+  {path: 'posts/:id/edit', component: PostEditComponent},
   {path: '**', redirectTo: '/posts'}
 ];
 

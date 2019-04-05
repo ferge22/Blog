@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PostsService {
+  postsChanged = new Subject<Post[]>();
+
   private posts: Post[] = [
     new Post(
       1,
@@ -38,7 +41,15 @@ export class PostsService {
   }
 
   getPost(index: number) {
-    return this.posts[index];
+    return {...this.posts[index]};
   }
+
+  deletePost(index: number) {
+    this.posts.splice(index, 1);
+    this.postsChanged.next(this.posts.slice());
+    console.log(this.allPosts);
+  }
+
+
 
 }

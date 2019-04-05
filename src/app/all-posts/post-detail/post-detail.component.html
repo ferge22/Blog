@@ -1,3 +1,29 @@
-<p>
-  {{ singleLoadedPost.title }}
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 offset-md-2">
+      <img
+        src="{{ singleLoadedPost.imagePath }}"
+        class="rounded img-fluid"
+        style="border-radius: 10px"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 offset-md-2">
+      <p class="h3 text-center">{{ singleLoadedPost.title }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 offset-md-2">
+      <p>{{ singleLoadedPost.description }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-md-8 offset-md-2">
+        <button type="button" class="btn btn-success btn-block" (click)="onEdit()">Edit</button>
+    </div>
+    <div class="col-xs-6 col-md-8 offset-md-2">
+      <button type="button" class="btn btn-danger btn-block" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+</div>
