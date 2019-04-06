@@ -9,6 +9,7 @@ import { Response } from 'selenium-webdriver/http';
 })
 export class HeaderComponent implements OnInit {
   status = false;
+  status2 = false;
 
   constructor(private dataStorageService: DataStorageService) { }
 
@@ -19,6 +20,10 @@ export class HeaderComponent implements OnInit {
     this.status = !this.status;
   }
 
+  toogleNav2() {
+    this.status2 = !this.status2;
+  }
+
   onSaveServer() {
     this.dataStorageService.storePosts()
       .subscribe(
@@ -26,6 +31,10 @@ export class HeaderComponent implements OnInit {
           console.log(response);
         }
       );
+  }
+
+  getPosts() {
+    this.dataStorageService.getPosts();
   }
 
 }

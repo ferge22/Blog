@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post.model';
 import { Subject } from 'rxjs';
+import { DataStorageService } from './data-storage.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 
 export class PostsService {
   postsChanged = new Subject<Post[]>();
@@ -52,6 +55,12 @@ export class PostsService {
 
   addPost(post: Post) {
     this.posts.push(post);
+    this.postsChanged.next(this.posts.slice());
+  }
+
+  // used in data storage service
+  setPosts(posts: Post[]) {
+    this.posts = posts;
     this.postsChanged.next(this.posts.slice());
   }
 

@@ -1,3 +1,13 @@
 .btn {
   margin-bottom: 10px;
 }
+
+.custom-btn {
+  margin-left: -15px;
+}
+
+.cstm-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}

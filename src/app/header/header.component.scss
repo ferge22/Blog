@@ -1,7 +1,17 @@
-.active {
-  border-bottom: 1.5px solid #007bff;
-}
+// .active {
+//   border-bottom: 1.5px solid #007bff;
+// }
 
 .navbar {
   margin-bottom: 15px;
+}
+
+.dropdown {
+  .btn {
+    border-color: #6c757d;
+    background-color: none !important;
+  }
+  .dropdown-menu {
+    min-width: 1px;
+  }
 }

@@ -12,9 +12,9 @@ import { PostEditComponent } from './all-posts/single-post/post-edit/post-edit.c
 import { NewPostComponent } from './new-post/new-post.component';
 import { ShortenPipe } from './shared/shorten.pipe';
 import { PostDetailComponent } from './all-posts/post-detail/post-detail.component';
-
 import { PostsService } from './services/posts.service';
-import { DataStorageService } from './services/data-storage.service';
+
+
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { DataStorageService } from './services/data-storage.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [PostsService, DataStorageService],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

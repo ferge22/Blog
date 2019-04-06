@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="col-xs-6 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <button type="button" class="custom-btn btn btn-outline-primary" (click)="onEdit()">Back</button>
+  </div>
   <div class="row">
     <div class="col-xs-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
       <img
@@ -18,12 +21,18 @@
       <p>{{ singleLoadedPost.description }}</p>
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-xs-6 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <button type="button" class="btn btn-success btn-block" (click)="onEdit()">Edit</button>
     </div>
     <div class="col-xs-6 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
       <button type="button" class="btn btn-danger btn-block" (click)="onDelete()">Delete</button>
     </div>
+  </div> -->
+  <div class="row">
+      <div class="cstm-btns col-xs-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <button type="submit" class="btn btn-success" (click)="onEdit()">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="onDelete()">Cancel</button>
+      </div>
   </div>
 </div>
