@@ -32,9 +32,9 @@ export class PostsService {
       'https://upload.wikimedia.org/wikipedia/commons/2/20/Wuyi_Mountains_Sea_of_clouds_2.jpg'
     ),
     new Post(
-      'An Amazing View',
-      'Look to that picture!',
-      'https://upload.wikimedia.org/wikipedia/commons/2/20/Wuyi_Mountains_Sea_of_clouds_2.jpg'
+      'Stop Global Warming!',
+      'Global warming is a long-term rise in the average temperature of the Earth climate system.',
+      'https://assets.nrdc.org/sites/default/files/styles/full_content--retina/public/media-uploads/clis11_cmw42d_2400.jpg?itok=pSF4SU7h'
     )
   ];
 

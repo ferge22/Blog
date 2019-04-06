@@ -1,6 +1,8 @@
 <div class="row" align-items-center>
   <app-single-post class="col-xs-12 col-md-6" *ngFor="let post of loadedPosts | paginate: { itemsPerPage: 4, currentPage: p }; let i = index" [index]="i" [singlePost]="post"></app-single-post>
-  <pagination-controls class="pagination-styles" (pageChange)="p = $event"></pagination-controls>
+</div>
+<div class="row">
+    <pagination-controls class="pagination-styles" (pageChange)="p = $event"></pagination-controls>
 </div>
 
 
