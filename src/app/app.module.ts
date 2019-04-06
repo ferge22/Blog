@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ import { PostEditComponent } from './all-posts/single-post/post-edit/post-edit.c
 import { NewPostComponent } from './new-post/new-post.component';
 import { ShortenPipe } from './shared/shorten.pipe';
 import { PostDetailComponent } from './all-posts/post-detail/post-detail.component';
+
+import { PostsService } from './services/posts.service';
+import { DataStorageService } from './services/data-storage.service';
 
 
 @NgModule({
@@ -28,9 +32,10 @@ import { PostDetailComponent } from './all-posts/post-detail/post-detail.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PostsService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

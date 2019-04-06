@@ -14,7 +14,6 @@ export class SinglePostComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-
   }
 
   onLoadSinglePost() {

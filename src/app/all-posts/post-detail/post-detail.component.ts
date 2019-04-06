@@ -18,7 +18,6 @@ export class PostDetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       (params: Params) => {
         this.id = params.id;
-        console.log(this.id);
       }
     );
 

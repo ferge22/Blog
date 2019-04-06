@@ -22,7 +22,6 @@ export class AllPostsComponent implements OnInit, OnDestroy {
       })
     );
   this.loadedPosts = this.postService.allPosts;
-  console.log(this.loadedPosts);
   }
 
   ngOnDestroy() {
