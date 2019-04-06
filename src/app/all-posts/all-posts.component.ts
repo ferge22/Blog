@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PostsService } from '../services/posts.service';
 import { Post } from '../models/post.model';
 import { Subscription } from 'rxjs';
-import { DataStorageService } from '../services/data-storage.service';
 
 @Component({
   selector: 'app-all-posts',
@@ -12,6 +11,7 @@ import { DataStorageService } from '../services/data-storage.service';
 export class AllPostsComponent implements OnInit, OnDestroy {
   loadedPosts: Post[];
   subscription: Subscription;
+  p = 1;
 
   constructor(private postService: PostsService) { }
 

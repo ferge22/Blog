@@ -30,6 +30,11 @@ export class PostsService {
       'An Amazing View',
       'Look to that picture!',
       'https://upload.wikimedia.org/wikipedia/commons/2/20/Wuyi_Mountains_Sea_of_clouds_2.jpg'
+    ),
+    new Post(
+      'An Amazing View',
+      'Look to that picture!',
+      'https://upload.wikimedia.org/wikipedia/commons/2/20/Wuyi_Mountains_Sea_of_clouds_2.jpg'
     )
   ];
 

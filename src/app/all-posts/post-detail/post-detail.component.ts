@@ -33,4 +33,8 @@ export class PostDetailComponent implements OnInit {
     this.router.navigate(['/posts']);
   }
 
+  onBack() {
+    this.router.navigate(['../'], {relativeTo: this.activatedRoute});
+  }
+
 }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { ShortenPipe } from './shared/shorten.pipe';
 import { PostDetailComponent } from './all-posts/post-detail/post-detail.component';
 import { PostsService } from './services/posts.service';
+
 
 
 
@@ -33,7 +35,8 @@ import { PostsService } from './services/posts.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
