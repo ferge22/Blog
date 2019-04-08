@@ -38,7 +38,7 @@
           ></textarea>
         </div>
         <div class="alert alert-danger" role="alert" *ngIf="!postForm.get('description').valid && postForm.get('description').touched">
-            Description must be between 1 and chars 130.
+            Description must be between 1 and chars 230.
         </div>
         <div class="cstm-btns">
           <button type="submit" class="btn btn-success" [disabled]="!postForm.valid">Save</button>

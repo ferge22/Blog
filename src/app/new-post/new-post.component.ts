@@ -21,7 +21,9 @@ export class NewPostComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    console.log(form);
     const formValue = form.value;
+    console.log(formValue);
     const newPost = new Post(formValue.title, formValue.description, formValue.imagePath);
     this.postsService.addPost(newPost);
     this.onCancel();

@@ -42,7 +42,7 @@ export class PostEditComponent implements OnInit {
           }),
           description: new FormControl(this.post.description, {
             updateOn: 'blur',
-            validators: [Validators.required, Validators.maxLength(130), Validators.minLength(1)]
+            validators: [Validators.required, Validators.maxLength(230), Validators.minLength(1)]
           }),
           imagePath: new FormControl(this.post.imagePath, {
             updateOn: 'blur',
