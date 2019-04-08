@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post.model';
 import { Subject } from 'rxjs';
-import { DataStorageService } from './data-storage.service';
 
 @Injectable({
   providedIn: 'root'

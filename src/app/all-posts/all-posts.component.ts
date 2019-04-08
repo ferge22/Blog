@@ -12,6 +12,7 @@ export class AllPostsComponent implements OnInit, OnDestroy {
   loadedPosts: Post[];
   subscription: Subscription;
   p = 1;
+  itemsPerPagePipe = 4;
 
   constructor(private postService: PostsService) { }
 
@@ -23,6 +24,7 @@ export class AllPostsComponent implements OnInit, OnDestroy {
       })
     );
   this.loadedPosts = this.postService.allPosts;
+  console.log(this.loadedPosts);
   }
 
   ngOnDestroy() {

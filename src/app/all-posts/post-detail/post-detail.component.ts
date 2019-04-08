@@ -20,7 +20,6 @@ export class PostDetailComponent implements OnInit {
         this.id = params.id;
       }
     );
-
     this.singleLoadedPost = this.postsService.getPost(this.id);
   }
 

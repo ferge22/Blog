@@ -10,10 +10,13 @@ import { Router } from '@angular/router';
 export class SinglePostComponent implements OnInit {
   @Input() singlePost: Post;
   @Input() index: number;
+  @Input() itemsPerPage: number;
+  @Input() currentPage: number;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.index = (this.itemsPerPage * (this.currentPage - 1)) + this.index;
   }
 
   onLoadSinglePost() {
