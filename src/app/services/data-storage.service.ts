@@ -18,11 +18,11 @@ export class DataStorageService {
   }
 
   getPosts() {
-    this.http.get('https://blog-mediapark.firebaseio.com/posts.json')
+    this.http.get<Post[]>('https://blog-mediapark.firebaseio.com/posts.json')
       .subscribe(
-        (response: Post[]) => {
-          console.log(response);
-          this.postService.setPosts(response);
+        (posts: Post[]) => {
+          console.log(posts);
+          this.postService.setPosts(posts);
         }
       );
   }

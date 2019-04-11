@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataStorageService } from '../services/data-storage.service';
-import { Response } from 'selenium-webdriver/http';
+import { HttpEvent } from '@angular/common/http';
+import { Post } from '../models/post.model';
+
 
 @Component({
   selector: 'app-header',
@@ -27,8 +29,8 @@ export class HeaderComponent implements OnInit {
   onSaveServer() {
     this.dataStorageService.storePosts()
       .subscribe(
-        (response: Response) => {
-          console.log(response);
+        (posts: HttpEvent<Post[]>) => {
+          console.log(posts);
         }
       );
   }
